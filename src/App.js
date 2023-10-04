@@ -5,12 +5,21 @@ import AdiosMundo from './components/AdiosMundo';
 import Saludar from './components/Saludar';
 
 function App() {
+  const User =  {
+    nombre: "Agustin Navarro Galdon",
+    edad: 26,
+    color: "Azul"
+  };
+
+  const saludarFn = name => {
+    console.log("Hola" + name);
+  };
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludar name="Agustin Navarro Galdon" edad="26"/>
-        <Saludar name="Paco" edad="31"/>
+        <Saludar userInfo={User} saludarFn={saludarFn}/>
       </header>
     </div>
   );

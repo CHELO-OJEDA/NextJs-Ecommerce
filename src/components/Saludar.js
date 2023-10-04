@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default  function Saludar(props) {
-    console.log(props);
+    console.log(props);   
     return (
       <div>
-         <h2>Hola {props.name}, tiene {props.edad} años</h2>
+         <button onClick={() => props.saludarFn(props.userInfo.nombre)}>Saludar</button>
       </div>
     );
 }
