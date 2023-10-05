@@ -6,13 +6,14 @@ import Saludar from './components/Saludar';
 
 function App() {
   const User =  {
-    nombre: "Agustin Navarro Galdon",
+    nombre: "Agustin Navarro",
     edad: 26,
     color: "Azul"
   };
 
-  const saludarFn = name => {
-    console.log("Hola" + name);
+  const saludarFn = (nombre, edad) => {
+    console.log("Hola " + nombre + ", tiene " + edad + " años." );
+    console.log(`Hola ${nombre}, tiene ${edad} años.`);
   };
   
   return (
