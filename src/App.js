@@ -5,23 +5,17 @@ import AdiosMundo from './components/AdiosMundo';
 import Saludar from './components/Saludar';
 
 function App() {
-  const User =  {
-    nombre: "Agustin Navarro",
-    edad: 26,
-    color: "Azul"
+  const enviarSaludo = nombre => {
+    console.log("Hola" + nombre);
   };
 
-  const saludarFn = (nombre, edad) => {
-    console.log("Hola " + nombre + ", tiene " + edad + " años." );
-    console.log(`Hola ${nombre}, tiene ${edad} años.`);
-  };
   
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Saludar userInfo={User} saludarFn={saludarFn}/>
-      </header>
+        <h1>Mi primer componente</h1>
+        <Saludar nombre="Agustin " apellidos="Navarro Galdon"/>
+        <Saludar nombre="Carlos " apellidos="Navarro Galdon"
+        enviarSaludo= {enviarSaludo}/>       
     </div>
   );
 }
